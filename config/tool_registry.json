@@ -1,0 +1,58 @@
+{
+  "deepGraphMCP": {
+    "name": "Deep Graph MCP",
+    "description": "Code graph analysis and visualization for repository understanding",
+    "type": "mcp",
+    "command": "npx",
+    "args": ["-y", "mcp-code-graph@latest"],
+    "capabilities": [
+      "code-analysis",
+      "architecture-mapping",
+      "dependency-analysis",
+      "semantic-search",
+      "documentation-search",
+      "security-audit",
+      "technical-debt-assessment"
+    ],
+    "tools": {
+      "list-graphs": {
+        "description": "List available repository graphs",
+        "usage": "discovery-phase"
+      },
+      "get-code": {
+        "description": "Retrieve complete code implementation",
+        "usage": "discovery-phase, verification-phase"
+      },
+      "find-direct-connections": {
+        "description": "Explore immediate relationships in code graph",
+        "usage": "verification-phase"
+      },
+      "nodes-semantic-search": {
+        "description": "Semantic search for code functionalities",
+        "usage": "discovery-phase"
+      },
+      "docs-semantic-search": {
+        "description": "Search repository documentation semantically",
+        "usage": "discovery-phase"
+      },
+      "get-usage-dependency-links": {
+        "description": "Analyze functionalities affected by changes",
+        "usage": "verification-phase"
+      },
+      "folder-tree-structure": {
+        "description": "Get folder tree structure",
+        "usage": "discovery-phase"
+      }
+    },
+    "configuration": {
+      "public_repos": {
+        "format": "username/repository-name",
+        "example": "microsoft/vscode"
+      },
+      "private_repos": {
+        "requires": ["CODEGPT_API_KEY", "CODEGPT_ORG_ID", "CODEGPT_GRAPH_ID"],
+        "setup_url": "https://app.codegpt.co/user/api-keys"
+      }
+    }
+  }
+}
